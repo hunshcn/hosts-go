@@ -8,8 +8,12 @@ hosts-go 是一个用于从互联网上获取和合并 hosts 文件的命令行�
 
 ## 安装
 
-使用以下命令将 hosts-go 安装到您的系统中：
+### 使用预编译的二进制文件
+```bash
+curl https://github.com/hunshcn/hosts-go/releases/latest/download/hosts-go_0.1.0_linux_amd64 -L -o /usr/bin/hosts-go && chmod +x /usr/bin/hosts-go
+```
 
+### go install
 ```
 go install github.com/hunshcn/hosts-go
 ```
@@ -35,10 +39,10 @@ hosts-go 提供了以下命令行选项：
 hosts-go -u https://gitlab.com/ineo6/hosts
 ```
 
-安装 hosts-go 作为系统服务：
+安装 hosts-go 作为系统服务（使用输入的参数）：
 
 ```
-hosts-go -s install
+hosts-go -u https://gitlab.com/ineo6/hosts -s install
 ```
 
 卸载 hosts-go 服务：

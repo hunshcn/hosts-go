@@ -62,9 +62,9 @@ func newCmd() *cobra.Command {
 
 			switch serviceAction {
 			case "install":
-				return installService(urls)
+				return installService(duration, urls)
 			case "uninstall":
-				return uninstallService(urls)
+				return uninstallService(duration, urls)
 			case "":
 			default:
 				return errors.New("invalid service action")

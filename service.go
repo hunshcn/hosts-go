@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/kardianos/service"
 	"github.com/sirupsen/logrus"
@@ -72,7 +73,7 @@ restart() {
 }
 `
 
-func getService(urls []string) service.Service {
+func getService(duration time.Duration, urls []string) service.Service {
 	var depends []string
 	options := make(service.KeyValue)
 	switch service.ChosenSystem().String() {
@@ -90,6 +91,7 @@ func getService(urls []string) service.Service {
 		Description:  "Fetch and merge hosts files from the internet",
 		Dependencies: depends,
 		Option:       options,
+		Arguments:    []string{"--duration", fmt.Sprintf("%s", duration)},
 	}
 	for _, u := range urls {
 		svcConfig.Arguments = append(svcConfig.Arguments, "-u", u)
@@ -102,8 +104,8 @@ func getService(urls []string) service.Service {
 	return s
 }
 
-func installService(urls []string) error {
-	s := getService(urls)
+func installService(duration time.Duration, urls []string) error {
+	s := getService(duration, urls)
 	err := s.Install()
 	if err != nil {
 		return fmt.Errorf("failed to install service: %v", err)
@@ -113,8 +115,8 @@ func installService(urls []string) error {
 	return nil
 }
 
-func uninstallService(urls []string) error {
-	s := getService(urls)
+func uninstallService(duration time.Duration, urls []string) error {
+	s := getService(duration, urls)
 	err := s.Uninstall()
 	if err != nil {
 		return fmt.Errorf("failed to install service: %v", err)

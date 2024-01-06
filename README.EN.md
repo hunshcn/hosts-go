@@ -8,10 +8,14 @@ hosts-go is a command-line tool for fetching and merging hosts files from the in
 
 ## Installation
 
-To install hosts-go to your system, use the following command:
-
+### use pre-compiled binary
+```bash
+curl https://github.com/hunshcn/hosts-go/releases/latest/download/hosts-go_0.1.0_linux_amd64 -L -o /usr/bin/hosts-go && chmod +x /usr/bin/hosts-go
 ```
-go install github.com/hunshcn/hosts-go
+
+### go install
+```
+go install github.com/hunshcn/hosts-go@latest
 ```
 
 ## Usage
@@ -30,13 +34,13 @@ hosts-go provides the following command-line options:
 Fetch and merge hosts files:
 
 ```
-hosts-go --url https://gitlab.com/ineo6/hosts
+hosts-go -u https://gitlab.com/ineo6/hosts
 ```
 
 Install hosts-go as a system service:
 
 ```
-hosts-go -s install
+hosts-go -u https://gitlab.com/ineo6/hosts -s install
 ```
 
 Uninstall hosts-go service:
