@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"runtime/debug"
 	"strings"
 	"time"
 
@@ -27,6 +28,10 @@ var (
 )
 
 func main() {
+	i, _ := debug.ReadBuildInfo()
+	if i != nil && i.Main.Version != "(devel)" {
+		version = i.Main.Version
+	}
 	rootCmd := newCmd()
 	rootCmd.Version = version
 
