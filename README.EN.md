@@ -10,7 +10,7 @@ hosts-go is a command-line tool for fetching and merging hosts files from the in
 
 ### use pre-compiled binary
 ```bash
-curl https://github.com/hunshcn/hosts-go/releases/latest/download/hosts-go_0.1.0_linux_amd64 -L -o /usr/bin/hosts-go && chmod +x /usr/bin/hosts-go
+curl https://github.com/hunshcn/hosts-go/releases/latest/download/hosts-go_linux_amd64 -L -o /usr/bin/hosts-go && chmod +x /usr/bin/hosts-go
 ```
 
 ### go install

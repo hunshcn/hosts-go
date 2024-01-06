@@ -10,7 +10,7 @@ hosts-go 是一个用于从互联网上获取和合并 hosts 文件的命令行�
 
 ### 使用预编译的二进制文件
 ```bash
-curl https://github.com/hunshcn/hosts-go/releases/latest/download/hosts-go_0.1.0_linux_amd64 -L -o /usr/bin/hosts-go && chmod +x /usr/bin/hosts-go
+curl https://github.com/hunshcn/hosts-go/releases/latest/download/hosts-go_linux_amd64 -L -o /usr/bin/hosts-go && chmod +x /usr/bin/hosts-go
 ```
 
 ### go install
