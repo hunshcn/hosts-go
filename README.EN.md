@@ -34,13 +34,13 @@ hosts-go provides the following command-line options:
 Fetch and merge hosts files:
 
 ```
-hosts-go -u https://gitlab.com/ineo6/hosts
+hosts-go -u https://gitlab.com/ineo6/hosts/-/raw/master/next-hosts
 ```
 
 Install hosts-go as a system service:
 
 ```
-hosts-go -u https://gitlab.com/ineo6/hosts -s install
+hosts-go -u https://gitlab.com/ineo6/hosts/-/raw/master/next-hosts -s install
 ```
 
 Uninstall hosts-go service:

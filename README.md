@@ -15,12 +15,12 @@ curl https://github.com/hunshcn/hosts-go/releases/latest/download/hosts-go_linux
 
 ### go install
 ```
-go install github.com/hunshcn/hosts-go
+go install github.com/hunshcn/hosts-go@latest
 ```
 
 ## 使用
 > [!NOTE]
-> v1.0.0 发布之前可能进行较大 API 变更。 
+> v1.0.0 发布之前无法保证 API 稳定性。
 
 hosts-go 提供了以下命令行选项：
 
@@ -36,13 +36,13 @@ hosts-go 提供了以下命令行选项：
 获取并合并 hosts 文件：
 
 ```
-hosts-go -u https://gitlab.com/ineo6/hosts
+hosts-go -u https://gitlab.com/ineo6/hosts/-/raw/master/next-hosts
 ```
 
 安装 hosts-go 作为系统服务（使用输入的参数）：
 
 ```
-hosts-go -u https://gitlab.com/ineo6/hosts -s install
+hosts-go -u https://gitlab.com/ineo6/hosts/-/raw/master/next-hosts -s install
 ```
 
 卸载 hosts-go 服务：
