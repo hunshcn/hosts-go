@@ -19,9 +19,6 @@ go install github.com/hunshcn/hosts-go@latest
 ```
 
 ## 使用
-> [!NOTE]
-> v1.0.0 发布之前无法保证 API 稳定性。
-
 hosts-go 提供了以下命令行选项：
 
 - `--url` 或 `-u`：指定要获取 hosts 文件的 URL。可以指定多个 URL。
@@ -58,3 +55,7 @@ hosts-go -s uninstall
 ## License
 
 MIT License.
+
+## 其他
+
+本项目不提供 hosts，比较类似 [SwitchHosts](https://github.com/oldj/SwitchHosts) 的功能。不过什么都写好了才发现好像 hosts 效果还是太差。
